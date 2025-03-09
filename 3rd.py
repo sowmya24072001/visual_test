@@ -1,4 +1,3 @@
-!pip install streamlit pandas matplotlib seaborn
 import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -34,4 +33,3 @@ plt.title("Student Satisfaction Trends")
 st.pyplot(fig)
 
 st.write("📌 **Insights:** Retention rates have fluctuated across departments. Engineering has the lowest retention, indicating a need for support programs.")
-
