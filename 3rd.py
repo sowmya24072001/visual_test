@@ -74,12 +74,11 @@ ax[1].set_title("Satisfaction Levels by Department")
 ax[1].legend(title="Department")
 
 st.pyplot(fig)
-
 # Key Findings and Actionable Insights
 st.header("Key Findings & Actionable Insights")
 st.write("**Insights:**")
-st.write("- Retention rates have fluctuated across departments. Engineering has the lowest retention, indicating a need for support programs.")
-st.write("- Student satisfaction scores have varied over the years. Continuous monitoring and improvements are necessary.")
-st.write("- The majority of enrollments are in the Engineering department. Additional resources may be needed to support this trend.")
-st.write("- Spring term has higher enrollment compared to the Fall term. Investigate potential factors and address any imbalances.")
+st.write("- Retention rates across departments have shown some ups and downs. Engineering, in particular, has been struggling, indicating a clear need for support programs to help students stay on track.")
+st.write("- Student satisfaction scores have been quite the rollercoaster ride over the years. It’s crucial to keep a close eye on these scores and continuously work on making improvements.")
+st.write("- The Engineering department seems to be the most popular choice among students, with the highest number of enrollments. This means we might need to allocate more resources to support the growing number of students.")
+st.write("- Interestingly, the Spring term sees higher enrollments compared to the Fall term. It’s worth looking into why this is happening and addressing any potential issues causing this imbalance.")
 
