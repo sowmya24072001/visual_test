@@ -6,7 +6,6 @@ import seaborn as sns
 # Load the dataset
 df = pd.read_csv("university_student_dashboard_data (1).csv")
 
-# Streamlit UI
 st.title("📊 University Admissions & Student Satisfaction Dashboard")
 
 # Show overall statistics
@@ -22,14 +21,19 @@ st.metric("Total Enrollments", filtered_df["Enrolled"].sum())
 
 # Retention Rate
 fig, ax = plt.subplots()
-sns.lineplot(data=df, x="Year", y="Retention Rate (%)", hue="department", marker="o", ax=ax)
-plt.title("Retention Rate Trends")
+# If you want to plot retention rate for each department, you need to use the columns that represent departments
+departments = ["Engineering Enrolled", "Business Enrolled", "Arts Enrolled", "Science Enrolled"]
+for department in departments:
+    sns.lineplot(data=df, x="Year", y=department, marker="o", ax=ax, label=department)
+plt.title("Retention Rate Trends by Department")
+ax.set_ylabel("Retention Rate (%)")
+ax.legend(title="Department")
 st.pyplot(fig)
 
 # Satisfaction Scores
 fig, ax = plt.subplots()
-sns.barplot(data=df, x="Year", y="Student Satisfaction (%)", hue="department", ax=ax)
+sns.barplot(data=df, x="Year", y="Student Satisfaction (%)", ax=ax)
 plt.title("Student Satisfaction Trends")
 st.pyplot(fig)
 
-st.write("**Insights:** Retention rates have fluctuated across departments. Engineering has the lowest retention, indicating a need for support programs.")
+st.write("📌 **Insights:** Retention rates have fluctuated across departments. Engineering has the lowest retention, indicating a need for support programs.")
