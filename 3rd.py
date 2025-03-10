@@ -32,4 +32,4 @@ sns.barplot(data=df, x="Year", y="Student Satisfaction (%)", hue="department", a
 plt.title("Student Satisfaction Trends")
 st.pyplot(fig)
 
-st.write("📌 **Insights:** Retention rates have fluctuated across departments. Engineering has the lowest retention, indicating a need for support programs.")
+st.write("**Insights:** Retention rates have fluctuated across departments. Engineering has the lowest retention, indicating a need for support programs.")
