@@ -7,7 +7,7 @@ import seaborn as sns
 df = pd.read_csv("university_student_dashboard_data (1).csv")
 
 # Streamlit UI
-st.title("📊 University Admissions & Student Satisfaction Dashboard")
+st.title(" University Admissions & Student Satisfaction Dashboard")
 
 # Sidebar Filters
 st.sidebar.header("Filters")
