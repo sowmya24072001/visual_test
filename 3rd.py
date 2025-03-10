@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 
 # Load the dataset
-df = pd.read_csv("university_student_dashboard_data.csv")
+df = pd.read_csv("university_student_dashboard_data (1).csv")
 
 # Streamlit UI
 st.title("📊 University Admissions & Student Satisfaction Dashboard")
